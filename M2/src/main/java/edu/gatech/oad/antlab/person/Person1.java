@@ -32,9 +32,9 @@ public class Person1 {
 	private String calc(String input) {
 	    if (input.length() > 2) {
 	        return input.substring(2) + input.substring(0, 2);
-        } else {
-            return input;
-        }
+	    } else {
+	        return input;
+	    }
 	}
 	
 	/**
