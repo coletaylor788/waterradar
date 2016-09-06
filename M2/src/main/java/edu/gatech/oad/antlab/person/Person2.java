@@ -1,5 +1,9 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -11,7 +15,8 @@ package edu.gatech.oad.antlab.person;
 public class Person2 {
     /** Holds the persons real name */
     private String name;
-	 	/**
+
+		/**
 	 * The constructor, takes in the persons
 	 * name
 	 * @param pname the person's real name
@@ -30,18 +35,31 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+		List<String> chars = Arrays.asList(input.split(""));
+		Collections.shuffle(chars);
+		String stringb = new String();
+		for (String w : chars) {
+			stringb+=w;
+		}
+		return stringb;
 	}
 	/**
 	 * Return a string rep of this object
 	 * that varies with an input string
 	 *
 	 * @param input the varying string
-	 * @return the string representing the 
+	 * @return the string representing the
 	 *         object
 	 */
 	public String toString(String input) {
-	  return name + calc(input);
+		return name + calc(input);
 	}
+
+	/*testing
+	public static void main(String[] args){
+		Person2 person = new Person2("shelly");
+		System.out.println(person.calc("shelly"));
+	}
+	*/
 }
+
