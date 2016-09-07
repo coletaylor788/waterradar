@@ -46,8 +46,8 @@ public class Person3 {
 	private String calc(String input) {
 		
 		String reverse = "";
-		for (int i = 0; i < input.size(); i++) {
-			reverse.concat(input.charAt(i).toString());
+		for (int i = 0; i < input.length(); i++) {
+			reverse += input.charAt(i);
 		}
 		return reverse;
 	}
