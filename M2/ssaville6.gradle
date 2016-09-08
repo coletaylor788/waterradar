@@ -1,14 +1,8 @@
-// Gradle Build File
-// Name: Cole Taylor
-
-defaultTasks 'jar'
+//Gradle File
 
 apply plugin: 'java'
 
-
-dependencies {
-    compile files("lib/resources.jar")    
-}
+defaultTasks 'jar'
 
 jar {
     manifest {
@@ -16,4 +10,8 @@ jar {
             'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
             'Class-Path': "../../lib/resources.jar" 
     }
+}
+
+dependencies {
+    compile files("lib/resources.jar")
 }
