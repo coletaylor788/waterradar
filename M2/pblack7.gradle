@@ -1,20 +1,19 @@
 //Gradle File
-//Me
+//Patrick Black
 
 apply plugin: 'java'
 
 defaultTasks 'jar'
 
-def direct = file(".")
 
 dependencies{
-    compile files("$direct/lib/resources.jar")
+    compile files("lib/resources.jar")
 }
 
 jar {
     manifest {
         attributes 'Implementation-Title': 'M2',
                     'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
-                    'Class-Path': "$direct/lib/resources.jar"
+                    'Class-Path': "../../lib/resources.jar"
     }
 }
